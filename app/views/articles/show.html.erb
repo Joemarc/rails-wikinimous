@@ -1,0 +1,18 @@
+<div class= "text-center padded">
+  <h1><%= @article.title %></h1>
+  <p><%= @article.content %></p>
+  <ul>
+    <li class= "list-inline"><%= link_to "View all articles", articles_path, class: 'btn btn-primary' %></li>
+    <li class= "list-inline">
+      <%= link_to edit_article_path(@article) do %>
+      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+      <% end %>
+    </li>
+    <li class= "list-inline">
+      <%= link_to article_path(@article), method: :delete do %>
+      <i class="fa fa-trash" aria-hidden="true"></i>
+      <%end%>
+    </li>
+  </ul>
+</div>
+
